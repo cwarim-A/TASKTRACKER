@@ -1,8 +1,9 @@
-import { useState } from "react"
+import React, { useState } from "react"
 
 const AddTask = ({onAdd}) => {
     const [text,setText] = useState("")
-    const [day,setDay] = useState("")
+    const [date,setDate] = useState("")
+    const [time,setTime]= useState("")
     const [reminder,setReminder] = useState(false)
     const onSubmit=(e)=>{
         e.preventDefault()
@@ -12,9 +13,12 @@ const AddTask = ({onAdd}) => {
             return
         }
 
-        onAdd({text,day,reminder})
+        onAdd({text,date,time,reminder})
+
+        
         setText("")
-        setDay("")
+        setDate("")
+        setTime("")
         setReminder(false)
     }
 
@@ -26,8 +30,12 @@ const AddTask = ({onAdd}) => {
             <input type="text" placeholder='Add Task' value={text} onChange={(e)=> setText(e.target.value)}/>
         </div>
         <div className='form-control'>
-            <label>Day $ Time</label>
-            <input type="text" placeholder='Add Day $ Time ' value={day} onChange={(e)=> setDay(e.target.value)}/>
+            <label>Date</label>
+            <input type="date" placeholder='Add Day ' value={date} onChange={(e)=> setDate(e.target.value)}/>
+        </div>
+        <div className='form-control'>
+            <label> Time</label>
+            <input type="Time" placeholder=' Time ' value={time} onChange={(e)=> setTime(e.target.value)}/>
         </div>
         <div className='form-control form-control-check'>
             <label>Set Reminder</label>
