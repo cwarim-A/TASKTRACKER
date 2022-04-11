@@ -13,21 +13,21 @@ function App() {
       
       "id": 1,
       "text": "Doctors Appointment",
-      "day": "25/11/1538",
+      "day": "25-11-1997",
       "time":"2:30pm",
       "reminder": true
     },
     {
       "id": 2,
       "text": "Meeting at School",
-      "day": "4/25/1998",
+      "day": "4-25-1998",
       "time":"9:30pm",
       "reminder": true
     },
     {
       "id": 3,
       "text": "Grocery Shopping",
-      "day": "5/25/1995",
+      "day": "5-25-1995",
       "time":"12:30pm",
       "reminder": false
     }
